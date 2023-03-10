@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--Cách 2: tương tác với HTML thông qua Dom-->
+<label>Điểm Vật lý</label>
+<input type="text" id="vatly"><br><br>
+<label>Điểm Hóa học</label>
+<input type="text" id="hoahoc"><br><br>
+<label>Điểm Sinh học</label>
+<input type="text" id="sinhhoc"><br><br>
+<button type="button" onclick="Sum_Avg()">Tính tổng và trung bình</button>
+<h2 id="sum">Tổng điểm </h2>
+<h2 id="avg">Điểm trung bình</h2>
+
+<script>
+    function Sum_Avg() {
+        let diemly = +document.getElementById('vatly').value;
+        console.log('diem ly' + diemly);
+        let diemhoa = +document.getElementById('hoahoc').value;
+        console.log('diem hoa' + diemhoa);
+        let diemsinh = +document.getElementById('sinhhoc').value;
+        console.log('diem sinh ' + diemsinh);
+        let sum = diemly + diemhoa + diemsinh;
+        console.log('tong diem' + sum);
+        let avg = sum / 3;
+        console.log('trung binh' + avg);
+        document.getElementById('sum').innerHTML = 'Tổng điểm = ' + sum;
+        document.getElementById('avg').innerHTML = 'Điểm trung bình = ' + avg;
+    }
+
+    // Cách 1: Dùng JS thuần
+    // let diemly = +prompt('Nhap diem vat ly :' );
+    // let diemhoa = +prompt('Nhap diem hoa hoc: ');
+    // let diemsinh = +prompt('Nhap diem sinh hoc: ');
+    // let sum = diemly + diemhoa + diemsinh;
+    // let avg = sum/3;
+    // document.write('Tong diem: ' +sum);
+    // document.write('<br/>');
+    // document.write('Trung binh: ' +avg);
+
+
+</script>
+
+</body>
+</html>

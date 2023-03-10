@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--CÁCH 2: TÁC ĐỘNG ĐẾN HTML QUA DOM-->
+<label>Nhập đường kính hình tròn: </label>
+<input type="number" id="duongKinh"><br><br>
+<button onclick="chuVi()">Tính chu vi hình tròn</button>
+<h2 id="result"></h2>
+
+
+<script>
+
+    const PI = Math.PI;
+
+    function chuVi() {
+        let Perimeter = PI * (document.getElementById('duongKinh').value);
+        document.getElementById('result').innerHTML = 'Chu vi hình tròn = ' + Perimeter;
+    }
+
+    // Cách 1: Sử dụng Js thuần
+    // let PI = 3.14;
+    // let D = +prompt('Nhập đường kính hình tròn D: ');
+    // let area = PI*D;
+    // document.write('Chu vi hình tròn: ', area);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--Cách 2: Tương tác với HTML thông qua DOM-->
+<label> Nhập bán kính R </label>
+<input type="number" id="bankinh">
+<button type="button" onclick="circleArea()">Tính diện tích</button>
+<h2 id="area"></h2>
+
+
+<script>
+
+    function circleArea() {
+        let radius = +document.getElementById('bankinh').value;
+        let area = 3.14 * radius * radius;
+        document.getElementById('area').innerHTML = 'Diện tích hình tròn: ' + area;
+    }
+
+    // Cách 1: Sử dụng Js thuần
+    // let PI = 3.14;
+    // let R = +prompt('Nhập bán kính hình tròn R: ');
+    // let area = PI*R*R;
+    // document.write('Diện tích hình tròn: ', area);
+
+</script>
+
+</body>
+</html>
